@@ -10,7 +10,7 @@ export default class DetailScreen extends Component {
   constructor(props) {
     super(props);
     // Burada this.setState()'i çağırmayınız!
-    this.state = { arr: [], q2Arr: [], LPUaddress: '', LDOaddress: '', SPUaddress: '', SDOaddress: '', GOOGLE_API_KEY: 'AIzaSyA8RlWilgNu3LXcNEiGyBdnAjpkkTWvFPE' };
+    this.state = { arr: [], q2Arr: [], LPUaddress: '', LDOaddress: '', SPUaddress: '', SDOaddress: '', GOOGLE_API_KEY: 'ur google api key', positionstack_key: "ur positionstack key" };
   }
 
   Query1 = async () => {
@@ -181,7 +181,7 @@ export default class DetailScreen extends Component {
 
     // adresleri koordinata çevirme
     let zoneLongest_distanceCoordinate = {
-      PUcoordinate: await fetch('http://api.positionstack.com/v1/forward?access_key=6a8d4d1e6b154dca441445e4b677ac2b'
+      PUcoordinate: await fetch(`http://api.positionstack.com/v1/forward?access_key=${this.state.positionstack_key}`
         + '&query=' + zoneLongest_distance.PUaddress + '&output=json')
         .then(response => response.json())
         .then(result => {
@@ -189,7 +189,7 @@ export default class DetailScreen extends Component {
           let res = { latitude: data[0].latitude, longitude: data[0].longitude };
           return res;
         }),
-      DOcoordinate: await fetch('http://api.positionstack.com/v1/forward?access_key=6a8d4d1e6b154dca441445e4b677ac2b'
+      DOcoordinate: await fetch(`http://api.positionstack.com/v1/forward?access_key=${this.state.positionstack_key}`
         + '&query=' + zoneLongest_distance.DOaddress + '&output=json')
         .then(response => response.json())
         .then(result => {
@@ -200,7 +200,7 @@ export default class DetailScreen extends Component {
     }
 
     let zoneShortest_distanceCoordinate = {
-      PUcoordinate: await fetch('http://api.positionstack.com/v1/forward?access_key=6a8d4d1e6b154dca441445e4b677ac2b'
+      PUcoordinate: await fetch(`http://api.positionstack.com/v1/forward?access_key=${this.state.positionstack_key}`
         + '&query=' + zoneShortest_distance.PUaddress + '&output=json')
         .then(response => response.json())
         .then(result => {
@@ -208,7 +208,7 @@ export default class DetailScreen extends Component {
           let res = { latitude: data[0].latitude, longitude: data[0].longitude };
           return res;
         }),
-      DOcoordinate: await fetch('http://api.positionstack.com/v1/forward?access_key=6a8d4d1e6b154dca441445e4b677ac2b'
+      DOcoordinate: await fetch(`http://api.positionstack.com/v1/forward?access_key=${this.state.positionstack_key}`
         + '&query=' + zoneShortest_distance.DOaddress + '&output=json')
         .then(response => response.json())
         .then(result => {
@@ -282,42 +282,6 @@ export default class DetailScreen extends Component {
 
     return fields;
   }
-
-  /*renderQuery3 = () => {
-    const shortestPU = this.state.SPUaddress;
-    const shortestDo = this.state.SDOaddress;
-    const fields = [];
-    if (shortestPU !== undefined || shortestPU !== null || shortestPU !== ''
-      || shortestDo !== undefined || shortestDo !== null || shortestDo !== '') {
-      fields.push(
-
-        <View style={{ flex: 1, flexDirection: 'column' }} key={'query3'}>
-          <MapView provider={PROVIDER_GOOGLE}
-            style={{ flex: 10 }}
-            initialRegion={{
-              latitude: 40.777048,
-              longitude: -73.967596,
-              latitudeDelta: 0.0922,
-              longitudeDelta: 0.0421,
-            }}>
-            <MapViewDirections
-              provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-              origin={shortestPU} //string isim PU ismi 
-              destination={shortestDo}
-              apikey={this.state.GOOGLE_API_KEY}
-              strokeWidth={3}
-              strokeColor="red"
-              onReady={result => {
-                console.log(result.coordinates);
-              }}
-            />
-          </MapView>
-        </View>
-      );
-    }
-
-    return fields;
-  } */
 
   render() {
     const { id } = this.props.route.params;

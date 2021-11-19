@@ -6,11 +6,11 @@
 ###Firstly u can't run this project without data if you want take data u should create ur data
 ###yellow_tripdata_2020-12.csv and taxi_zone_lookup.csv you should edit it according to the code and upload it to firebase realtime database in json format
 ###for me i take 1556 data from yellow_tripdata_2020-12.csv and take 256 data from taxi_zone_lookup.csv and set them in firebase realtime database
-###in the end ur firebase looks like that : 
-![firebase](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/firebase.jpg) <br/>
+###in the end ur firebase looks like that : <br/><br/>
+![firebase](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/firebase.jpg) <br/><br/>
 
-##*After firebase ready, u should set ur keys*
-![keys](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/keys.jpg)
+##*After firebase ready, u should set ur keys*<br/><br/>
+![keys](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/keys.jpg) <br/><br/>
 ###Set ur google api key and positionstack key
 <br/>
 
@@ -27,9 +27,9 @@
 ##*Third query :*  “Draw the shortest distance and the longest distance route from trips with at least 3 passengers. The starting and destination locations are accepted as the center of the location and a road must be found according to the distance.”
 <br/>
 
-##*Project display will be like that :*
-###Home screen : ![homescreen](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/homeScreen.jpg)<br/>
-###Query 1 : ![query1](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/query1.jpg)<br/>
-###Query 2 : ![query2](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/query2.jpg)<br/>
-###Query 3 : ![query3](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/query3.jpg)<br/>
+##*Project display will be like that :*<br/><br/><br/>
+###Home screen : <br/><br/>![homescreen](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/homeScreen.jpg)<br/><br/>
+###Query 1 :<br/><br/> ![query1](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/query1.jpg)<br/><br/>
+###Query 2 : <br/><br/>![query2](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/query2.jpg)<br/><br/>
+###Query 3 : <br/><br/>![query3](https://github.com/abdussamedkilic/mobile-query/blob/main/pictures/query3.jpg)<br/><br/>
 

@@ -21,7 +21,7 @@
 
 
 ## *Content of the project*
- - ### 3 queries given to us in this project are answered
+ #### 3 queries given to us in this project are answered
   - *First query :*  “List the days and distances of the 5 longest journeys”
   - *Second query :*  “According to the average wages per daily trip; List the average daily wages received between the two dates where the least charge was made”
   - *Third query :*  “Draw the shortest distance and the longest distance route from trips with at least 3 passengers. The starting and destination locations are accepted as the center of the location and a road must be found according to the distance.”
